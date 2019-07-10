@@ -159,8 +159,8 @@ function getLastElementOfProperty(obj, key) {
     if(!Array.isArray(obj[key])) {
         return undefined;
     } else {
-        var lastElem = obj[key].length - 1;
-        return obj[key][lastElem];
+        var lastElem = obj[key].length - 1; //(1)
+        return obj[key][lastElem]; // (2)
     }
   }
 
