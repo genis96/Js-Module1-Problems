@@ -1,7 +1,5 @@
-# Js-Module1-Problems
-Javascript Problems 
 
-
+Problem 1:
 
 /* Write a function called "getElementsGreaterThan10AtProperty".
 
@@ -32,7 +30,6 @@ console.log(output); // --> [20, 30]
 */
 
 function getElementsGreaterThan10AtProperty(obj, key) {
-    // your code here
     var emptyArr = []; // (1)
 
     for(var nums in obj[key]) { // (2)
@@ -40,16 +37,19 @@ function getElementsGreaterThan10AtProperty(obj, key) {
             emptyArr.push(obj[key][nums]); // (4)
         }
     }
-    return emptyArr; // (5)
-  }
-
+    return emptyArr; // (5) }
 var obj = {
     key: [1, 20, 30]
   };
   var output = getElementsGreaterThan10AtProperty(obj, 'key');
   console.log(output); // --> [20, 30]
-
-
+  
+  
+  
+  
+  
+  
+  Problem 2:
 
 
 /* Write a function called "getFirstElementOfProperty".
@@ -74,7 +74,14 @@ console.log(output); // --> 1
 3. else, return object key at index 0
 */
 
+/* Pseudo Code
+1. conditional that states !Array.isArray ((method) ArrayConstructor.isArray(arg: any): arg is any [] - so 'obj' and 'key' is passed in here ALSO - - the instructions say : "If the property at the given key is not an array, it should return undefined."
+2. return undefined 
+3. else, return object key at index 0
+*/
+
 /* My Solution */
+
 function getFirstElementOfProperty(obj, key) {
     // your code here
     if(!Array.isArray(obj[key])) { // (1)
@@ -83,13 +90,16 @@ function getFirstElementOfProperty(obj, key) {
         return obj[key][0]; // (3)
     }
   }
-
+  
 var obj = {
     key: [1, 2, 4]
   };
   var output = getFirstElementOfProperty(obj, 'key');
   console.log(output); // --> 1
 
+
+
+Problem 3:
 
 
 
@@ -117,6 +127,7 @@ console.log(output); // --> 2
 */
 
 /* My Solution */
+
 function getNthElementOfProperty(obj, key, n) {
     // your code here
     if(!Array.isArray(obj[key])) {
@@ -125,7 +136,6 @@ function getNthElementOfProperty(obj, key, n) {
         return obj[key][n];
     }
   }
-
 var obj = {
     key: [1, 2, 6]
   };
@@ -134,6 +144,8 @@ var obj = {
 
 
 
+
+Problem 4:
 
 
 /*Write a function called "getLastElementOfProperty".
@@ -156,8 +168,11 @@ console.log(output); // --> 5
  1. create new var and set it equal to the obj key.length -1 so that it can access the last element each time
  2. return obj[key][lastElem];
  */
-
- /* My Solution */
+ 
+ 
+  /* My Solution */
+  
+  
 function getLastElementOfProperty(obj, key) {
     // your code here
     if(!Array.isArray(obj[key])) {
